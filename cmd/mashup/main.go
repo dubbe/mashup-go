@@ -1,20 +1,19 @@
 package main
 
 import (
+	"fmt"
+	"log"
 	"net/http"
-	"strings"
 )
 
 func main() {
-	http.HandleFunc("/", sayHello)
-	if err := http.ListenAndServe(":8080", nil); err != nil {
-		panic(err)
-	}
+	addr := ":8080"
+	http.HandleFunc("/", handler)
+	log.Printf("Server started on port %s", addr)
+	log.Fatal(http.ListenAndServe(addr, nil))
 }
 
-func sayHello(w http.ResponseWriter, r *http.Request) {
-	message := r.URL.Path
-	message = strings.TrimPrefix(message, "/")
-	message = "Hello " + message
-	w.Write([]byte(message))
+func handler(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintf(w, "Hi there, I love %s!", r.URL.Path[1:])
+	GetAlbum(r.URL.Path[1:])
 }

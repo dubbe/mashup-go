@@ -1,16 +1,20 @@
 package main
 
+import (
+	"net/http"
+
+	"github.com/dubbe/mashup-go/internal/client/artist"
+	"github.com/dubbe/mashup-go/internal/client/coverart"
+	"github.com/dubbe/mashup-go/internal/client/description"
+	"github.com/dubbe/mashup-go/internal/server"
+)
+
 func main() {
-	// httpClient := &http.Client{}
-	// clients := server.Clients{
-	// 	Artist:    artist.NewMusicbrainz(httpClient),
-	// 	Wikipedia: description.NewWikipedia(httpClient),
-	// 	Wikidata:  description.NewWikidata(httpClient),
-	// }
+	httpClient := &http.Client{}
 
-	// server := server.Server{
-	// 	Clients: clients,
-	// }
+	wikipedia := description.NewWikipedia(&http.Client{})
+	wikidata := description.NewWikidata(&http.Client{}, wikipedia)
 
-	// server.NewServer()
+	s := server.NewServer(artist.NewMusicbrainz(httpClient), description.CreateDescriptionFactory(wikipedia, wikidata), coverart.NewCoverartArchive(httpClient))
+	s.Run()
 }

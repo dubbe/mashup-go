@@ -29,8 +29,7 @@ func NewServer(artistClient artist.ArtistClient, descriptionFactory *description
 	return s
 }
 
-func (s *Server) Run() {
-	addr := ":8080"
+func (s *Server) Run(addr string) {
 	http.HandleFunc("/", s.handler)
 	log.Printf("Server started on port %s", addr)
 	log.Fatal(http.ListenAndServe(addr, nil))

@@ -1,0 +1,767 @@
+{
+    "ipis": [],
+    "begin-area": {},
+    "begin_area": {},
+    "area": {},
+    "disambiguation": "90s US grunge band",
+    "release-groups": [],
+    "type": "Group",
+    "end_area": null,
+    "name": "Nirvana",
+    "isnis": [
+    "0000000123486830",
+    "0000000123487390"
+    ],
+    "end-area": null,
+    "sort-name": "Nirvana",
+    "id": "5b11f4ce-a62d-471e-81fc-a69a8278c7da",
+    "country": "US",
+    "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+    "life-span": {
+    "ended": true,
+    "end": "1994-04-05",
+    "begin": "1988-01"
+    },
+    "relations": [
+    {
+    "target-type": "url",
+    "target-credit": "",
+    "ended": false,
+    "url": {
+    "resource": "https://www.allmusic.com/artist/mn0000357406",
+    "id": "4a425cd3-641d-409c-a282-2334935bf1bd"
+    },
+    "type-id": "6b3e3c85-0002-4f34-aca6-80ace0d7e846",
+    "end": null,
+    "source-credit": "",
+    "attribute-ids": {},
+    "attributes": [],
+    "direction": "forward",
+    "type": "allmusic",
+    "begin": null,
+    "attribute-values": {}
+    },
+    {
+    "begin": null,
+    "attribute-values": {},
+    "direction": "forward",
+    "attributes": [],
+    "type": "BBC Music page",
+    "attribute-ids": {},
+    "source-credit": "",
+    "end": null,
+    "type-id": "d028a975-000c-4525-9333-d3c8425e4b54",
+    "url": {
+    "id": "627ce98c-0eef-41c7-b28f-cc3387b98aab",
+    "resource": "https://www.bbc.co.uk/music/artists/5b11f4ce-a62d-471e-81fc-a69a8278c7da"
+    },
+    "ended": false,
+    "target-credit": "",
+    "target-type": "url"
+    },
+    {
+    "begin": null,
+    "attribute-values": {},
+    "attributes": [],
+    "direction": "forward",
+    "type": "discography",
+    "type-id": "4fb0eeec-a6eb-4ae3-ad52-b55765b94e8f",
+    "end": null,
+    "source-credit": "",
+    "attribute-ids": {},
+    "url": {
+    "resource": "http://www.livenirvana.com/bootography/listing85a9.html?listingquery=all",
+    "id": "73a6779b-8aaa-42ff-9833-e550ad974be4"
+    },
+    "target-type": "url",
+    "ended": false,
+    "target-credit": ""
+    },
+    {
+    "target-credit": "",
+    "ended": false,
+    "target-type": "url",
+    "url": {
+    "resource": "http://www.livenirvana.com/digitalnirvana/discography/index.html",
+    "id": "aa2f9928-f2d0-4ce3-9714-af7566b9df94"
+    },
+    "source-credit": "",
+    "attribute-ids": {},
+    "end": null,
+    "type-id": "4fb0eeec-a6eb-4ae3-ad52-b55765b94e8f",
+    "direction": "forward",
+    "attributes": [],
+    "type": "discography",
+    "begin": null,
+    "attribute-values": {}
+    },
+    {
+    "attributes": [],
+    "type": "discography",
+    "direction": "forward",
+    "begin": null,
+    "attribute-values": {},
+    "source-credit": "",
+    "attribute-ids": {},
+    "type-id": "4fb0eeec-a6eb-4ae3-ad52-b55765b94e8f",
+    "end": null,
+    "url": {
+    "id": "d0498330-0679-4174-a145-273dd974e09e",
+    "resource": "http://www.nirvanaarchive.com/"
+    },
+    "target-credit": "",
+    "ended": false,
+    "target-type": "url"
+    },
+    {
+    "direction": "forward",
+    "attributes": [],
+    "type": "discogs",
+    "attribute-values": {},
+    "begin": null,
+    "source-credit": "",
+    "attribute-ids": {},
+    "end": null,
+    "type-id": "04a5b104-a4c2-4bac-99a1-7b837c37d9e4",
+    "url": {
+    "id": "81846eca-af41-43d0-bcae-b62dbf5cfa2f",
+    "resource": "https://www.discogs.com/artist/125246"
+    },
+    "target-credit": "",
+    "ended": false,
+    "target-type": "url"
+    },
+    {
+    "url": {
+    "resource": "http://www.livenirvana.com/",
+    "id": "74c7fc4f-cb3d-45ef-9c83-f7a1061f0272"
+    },
+    "ended": false,
+    "target-credit": "",
+    "target-type": "url",
+    "begin": null,
+    "attribute-values": {},
+    "direction": "forward",
+    "attributes": [],
+    "type": "fanpage",
+    "source-credit": "",
+    "attribute-ids": {},
+    "type-id": "f484f897-81cc-406e-96f9-cd799a04ee24",
+    "end": null
+    },
+    {
+    "begin": null,
+    "attribute-values": {},
+    "attributes": [],
+    "type": "fanpage",
+    "direction": "forward",
+    "source-credit": "",
+    "attribute-ids": {},
+    "end": null,
+    "type-id": "f484f897-81cc-406e-96f9-cd799a04ee24",
+    "url": {
+    "id": "e42476ce-e923-498e-8e98-d11ae200aebb",
+    "resource": "http://www.nirvanaclub.com/"
+    },
+    "ended": false,
+    "target-credit": "",
+    "target-type": "url"
+    },
+    {
+    "direction": "forward",
+    "attributes": [],
+    "type": "free streaming",
+    "begin": null,
+    "attribute-values": {},
+    "source-credit": "",
+    "attribute-ids": {},
+    "end": null,
+    "type-id": "769085a1-c2f7-4c24-a532-2375a77693bd",
+    "url": {
+    "resource": "https://open.spotify.com/artist/6olE6TJLqED3rqDCT0FyPh",
+    "id": "f6a499eb-5959-4861-95f1-13caec960006"
+    },
+    "target-credit": "",
+    "ended": false,
+    "target-type": "url"
+    },
+    {
+    "url": {
+    "resource": "https://www.deezer.com/artist/415",
+    "id": "05fd4bd7-b7c8-44f3-afdd-0f6b6b0b6092"
+    },
+    "ended": false,
+    "target-credit": "",
+    "target-type": "url",
+    "attribute-values": {},
+    "begin": null,
+    "type": "free streaming",
+    "attributes": [],
+    "direction": "forward",
+    "attribute-ids": {},
+    "source-credit": "",
+    "type-id": "769085a1-c2f7-4c24-a532-2375a77693bd",
+    "end": null
+    },
+    {
+    "type-id": "769085a1-c2f7-4c24-a532-2375a77693bd",
+    "end": null,
+    "attribute-ids": {},
+    "source-credit": "",
+    "begin": null,
+    "attribute-values": {},
+    "type": "free streaming",
+    "attributes": [],
+    "direction": "forward",
+    "target-type": "url",
+    "ended": false,
+    "target-credit": "",
+    "url": {
+    "resource": "http://www.pandora.com/nirvana",
+    "id": "c29fa499-8e33-455a-aaa0-d93ea088c55f"
+    }
+    },
+    {
+    "url": {
+    "id": "88867281-e540-4b37-9fce-870dda1bfd8b",
+    "resource": "https://commons.wikimedia.org/wiki/File:Nirvana_around_1992.jpg"
+    },
+    "target-credit": "",
+    "ended": false,
+    "target-type": "url",
+    "attributes": [],
+    "direction": "forward",
+    "type": "image",
+    "begin": null,
+    "attribute-values": {},
+    "attribute-ids": {},
+    "source-credit": "",
+    "end": null,
+    "type-id": "221132e9-e30e-43f2-a741-15afc4c5fa7c"
+    },
+    {
+    "url": {
+    "id": "85229dcd-cc79-4ce8-a3be-4b0539e9148a",
+    "resource": "https://www.imdb.com/name/nm1110321/"
+    },
+    "ended": false,
+    "target-credit": "",
+    "target-type": "url",
+    "begin": null,
+    "attribute-values": {},
+    "direction": "forward",
+    "attributes": [],
+    "type": "IMDb",
+    "attribute-ids": {},
+    "source-credit": "",
+    "type-id": "94c8b0cc-4477-4106-932c-da60e63de61c",
+    "end": null
+    },
+    {
+    "url": {
+    "resource": "https://www.last.fm/music/Nirvana",
+    "id": "36dc918b-2a58-4d31-9ccd-10af003e7386"
+    },
+    "target-credit": "",
+    "ended": false,
+    "target-type": "url",
+    "attributes": [],
+    "direction": "forward",
+    "type": "last.fm",
+    "attribute-values": {},
+    "begin": null,
+    "attribute-ids": {},
+    "source-credit": "",
+    "end": null,
+    "type-id": "08db8098-c0df-4b78-82c3-c8697b4bba7f"
+    },
+    {
+    "type-id": "e4d73442-3762-45a8-905c-401da65544ed",
+    "end": null,
+    "source-credit": "",
+    "attribute-ids": {},
+    "type": "lyrics",
+    "attributes": [],
+    "direction": "forward",
+    "attribute-values": {},
+    "begin": null,
+    "target-type": "url",
+    "target-credit": "",
+    "ended": false,
+    "url": {
+    "resource": "http://decoda.com/nirvana-lyrics",
+    "id": "2759d810-5a97-446e-b168-09d2dec389a9"
+    }
+    },
+    {
+    "end": null,
+    "type-id": "e4d73442-3762-45a8-905c-401da65544ed",
+    "attribute-ids": {},
+    "source-credit": "",
+    "attributes": [],
+    "type": "lyrics",
+    "direction": "forward",
+    "begin": null,
+    "attribute-values": {},
+    "target-type": "url",
+    "target-credit": "",
+    "ended": false,
+    "url": {
+    "id": "eb2efdf0-05cf-4ea8-bc00-b1b0d2bcdcfb",
+    "resource": "http://genius.com/artists/Nirvana"
+    }
+    },
+    {
+    "attributes": [],
+    "direction": "forward",
+    "type": "lyrics",
+    "attribute-values": {},
+    "begin": null,
+    "type-id": "e4d73442-3762-45a8-905c-401da65544ed",
+    "end": null,
+    "attribute-ids": {},
+    "source-credit": "",
+    "url": {
+    "id": "47e69f92-e4b3-46ca-9f95-28cc11bedf34",
+    "resource": "http://lyrics.wikia.com/Nirvana"
+    },
+    "target-type": "url",
+    "target-credit": "",
+    "ended": false
+    },
+    {
+    "url": {
+    "id": "740505c7-3a30-4482-8ca6-10183b37d308",
+    "resource": "http://muzikum.eu/en/122-4216/nirvana/lyrics.html"
+    },
+    "target-type": "url",
+    "target-credit": "",
+    "ended": false,
+    "type": "lyrics",
+    "attributes": [],
+    "direction": "forward",
+    "begin": null,
+    "attribute-values": {},
+    "type-id": "e4d73442-3762-45a8-905c-401da65544ed",
+    "end": null,
+    "source-credit": "",
+    "attribute-ids": {}
+    },
+    {
+    "begin": null,
+    "attribute-values": {},
+    "attributes": [],
+    "type": "myspace",
+    "direction": "forward",
+    "type-id": "bac47923-ecde-4b59-822e-d08f0cd10156",
+    "end": null,
+    "attribute-ids": {},
+    "source-credit": "",
+    "url": {
+    "id": "706cb178-5d5c-49e0-a07f-149751b94043",
+    "resource": "https://myspace.com/nirvana"
+    },
+    "target-type": "url",
+    "ended": false,
+    "target-credit": ""
+    },
+    {
+    "end": null,
+    "type-id": "fe33d22f-c3b0-4d68-bd53-a856badf2b15",
+    "source-credit": "",
+    "attribute-ids": {},
+    "type": "official homepage",
+    "attributes": [],
+    "direction": "forward",
+    "attribute-values": {},
+    "begin": null,
+    "target-type": "url",
+    "target-credit": "",
+    "ended": false,
+    "url": {
+    "id": "4347ffe2-82ec-4059-9520-6a1a3f73a304",
+    "resource": "http://www.nirvana.com/"
+    }
+    },
+    {
+    "attributes": [],
+    "type": "other databases",
+    "direction": "forward",
+    "attribute-values": {},
+    "begin": null,
+    "source-credit": "",
+    "attribute-ids": {},
+    "end": null,
+    "type-id": "d94fb61c-fa20-4e3c-a19a-71a949fb2c55",
+    "url": {
+    "resource": "http://d-nb.info/gnd/10295339-9",
+    "id": "88a3f586-d383-4cd8-9458-f48512533799"
+    },
+    "target-credit": "",
+    "ended": false,
+    "target-type": "url"
+    },
+    {
+    "begin": null,
+    "attribute-values": {},
+    "attributes": [],
+    "type": "other databases",
+    "direction": "forward",
+    "source-credit": "",
+    "attribute-ids": {},
+    "type-id": "d94fb61c-fa20-4e3c-a19a-71a949fb2c55",
+    "end": null,
+    "url": {
+    "resource": "http://id.loc.gov/authorities/names/n92011111",
+    "id": "222144c5-b46d-4d67-9f56-e9fb654e2e86"
+    },
+    "ended": false,
+    "target-credit": "",
+    "target-type": "url"
+    },
+    {
+    "attribute-ids": {},
+    "source-credit": "",
+    "end": null,
+    "type-id": "d94fb61c-fa20-4e3c-a19a-71a949fb2c55",
+    "begin": null,
+    "attribute-values": {},
+    "type": "other databases",
+    "attributes": [],
+    "direction": "forward",
+    "ended": false,
+    "target-credit": "",
+    "target-type": "url",
+    "url": {
+    "resource": "http://musicmoz.org/Bands_and_Artists/N/Nirvana/",
+    "id": "21daaa31-4c41-4fc9-b07d-e77b3f01d3e6"
+    }
+    },
+    {
+    "ended": false,
+    "target-credit": "",
+    "target-type": "url",
+    "url": {
+    "id": "07a468c6-3ceb-4e44-b0b9-f46cca1151dc",
+    "resource": "http://rateyourmusic.com/artist/nirvana"
+    },
+    "attribute-ids": {},
+    "source-credit": "",
+    "type-id": "d94fb61c-fa20-4e3c-a19a-71a949fb2c55",
+    "end": null,
+    "begin": null,
+    "attribute-values": {},
+    "type": "other databases",
+    "attributes": [],
+    "direction": "forward"
+    },
+    {
+    "end": null,
+    "type-id": "d94fb61c-fa20-4e3c-a19a-71a949fb2c55",
+    "source-credit": "",
+    "attribute-ids": {},
+    "begin": null,
+    "attribute-values": {},
+    "direction": "forward",
+    "attributes": [],
+    "type": "other databases",
+    "target-type": "url",
+    "ended": false,
+    "target-credit": "",
+    "url": {
+    "id": "96d41441-df74-4dda-8a0f-c99462b22a7c",
+    "resource": "https://catalogue.bnf.fr/ark:/12148/cb13944446b"
+    }
+    },
+    {
+    "end": null,
+    "type-id": "d94fb61c-fa20-4e3c-a19a-71a949fb2c55",
+    "source-credit": "",
+    "attribute-ids": {},
+    "attributes": [],
+    "direction": "forward",
+    "type": "other databases",
+    "attribute-values": {},
+    "begin": null,
+    "target-type": "url",
+    "target-credit": "",
+    "ended": false,
+    "url": {
+    "resource": "https://nla.gov.au/nla.party-1179730",
+    "id": "1631d12d-9c1f-4899-a2d4-f54ffe615ca1"
+    }
+    },
+    {
+    "attributes": [],
+    "type": "other databases",
+    "direction": "forward",
+    "attribute-values": {},
+    "begin": null,
+    "type-id": "d94fb61c-fa20-4e3c-a19a-71a949fb2c55",
+    "end": null,
+    "attribute-ids": {},
+    "source-credit": "",
+    "url": {
+    "id": "902a6503-ed52-4207-ae6e-f1a64dc53888",
+    "resource": "https://www.musik-sammler.de/artist/nirvana/"
+    },
+    "target-type": "url",
+    "target-credit": "",
+    "ended": false
+    },
+    {
+    "type-id": "d94fb61c-fa20-4e3c-a19a-71a949fb2c55",
+    "end": null,
+    "source-credit": "",
+    "attribute-ids": {},
+    "attributes": [],
+    "direction": "forward",
+    "type": "other databases",
+    "begin": null,
+    "attribute-values": {},
+    "target-type": "url",
+    "target-credit": "",
+    "ended": false,
+    "url": {
+    "id": "805e0346-cdfb-4eae-a8c4-f27937288cda",
+    "resource": "http://www.whosampled.com/Nirvana/"
+    }
+    },
+    {
+    "source-credit": "",
+    "attribute-ids": {},
+    "type-id": "d94fb61c-fa20-4e3c-a19a-71a949fb2c55",
+    "end": null,
+    "attributes": [],
+    "direction": "forward",
+    "type": "other databases",
+    "begin": null,
+    "attribute-values": {},
+    "target-credit": "",
+    "ended": false,
+    "target-type": "url",
+    "url": {
+    "id": "2127a8c5-befb-401c-a6f0-057b4f4a4581",
+    "resource": "http://www.worldcat.org/wcidentities/lccn-n92-11111"
+    }
+    },
+    {
+    "type": "purchase for download",
+    "attributes": [],
+    "direction": "forward",
+    "begin": null,
+    "attribute-values": {},
+    "type-id": "f8319a2f-f824-4617-81c8-be6560b3b203",
+    "end": null,
+    "attribute-ids": {},
+    "source-credit": "",
+    "url": {
+    "resource": "https://itunes.apple.com/us/artist/id112018",
+    "id": "9fc44b9f-8ca9-4079-952f-fcd8a2976dbf"
+    },
+    "target-type": "url",
+    "target-credit": "",
+    "ended": false
+    },
+    {
+    "type-id": "f8319a2f-f824-4617-81c8-be6560b3b203",
+    "end": null,
+    "attribute-ids": {},
+    "source-credit": "",
+    "type": "purchase for download",
+    "attributes": [],
+    "direction": "forward",
+    "begin": null,
+    "attribute-values": {},
+    "target-type": "url",
+    "target-credit": "",
+    "ended": false,
+    "url": {
+    "id": "adb16d0b-c38d-471c-b3da-4f715267f620",
+    "resource": "https://play.google.com/store/music/artist?id=Apyli2ev5del3s42qsjpnmqwuue"
+    }
+    },
+    {
+    "attribute-ids": {},
+    "source-credit": "",
+    "type-id": "b6f02157-a9d3-4f24-9057-0675b2dbc581",
+    "end": null,
+    "begin": null,
+    "attribute-values": {},
+    "direction": "forward",
+    "attributes": [],
+    "type": "purevolume",
+    "ended": false,
+    "target-credit": "",
+    "target-type": "url",
+    "url": {
+    "resource": "http://www.purevolume.com/Nirvana109A",
+    "id": "61139a11-0318-481d-b305-bf569e400e50"
+    }
+    },
+    {
+    "source-credit": "",
+    "attribute-ids": {},
+    "end": null,
+    "type-id": "79c5b84d-a206-4f4c-9832-78c028c312c3",
+    "type": "secondhandsongs",
+    "attributes": [],
+    "direction": "forward",
+    "begin": null,
+    "attribute-values": {},
+    "target-credit": "",
+    "ended": false,
+    "target-type": "url",
+    "url": {
+    "id": "5f33ae58-aa56-40bd-ad14-ab7db9b3d3fd",
+    "resource": "http://www.secondhandsongs.com/artist/169"
+    }
+    },
+    {
+    "attribute-ids": {},
+    "source-credit": "",
+    "type-id": "bf5d0d5e-27a1-4e94-9df7-3cdc67b3b207",
+    "end": null,
+    "begin": null,
+    "attribute-values": {},
+    "type": "setlistfm",
+    "attributes": [],
+    "direction": "forward",
+    "ended": false,
+    "target-credit": "",
+    "target-type": "url",
+    "url": {
+    "id": "47616077-74cb-47c6-8bd4-cf34753a9af0",
+    "resource": "https://www.setlist.fm/setlists/nirvana-7bd69ee8.html"
+    }
+    },
+    {
+    "target-type": "url",
+    "target-credit": "",
+    "ended": false,
+    "url": {
+    "resource": "https://twitter.com/Nirvana",
+    "id": "f5cfd704-b99a-45fc-9aed-8747257cad03"
+    },
+    "type-id": "99429741-f3f6-484b-84f8-23af51991770",
+    "end": null,
+    "source-credit": "",
+    "attribute-ids": {},
+    "attributes": [],
+    "direction": "forward",
+    "type": "social network",
+    "begin": null,
+    "attribute-values": {}
+    },
+    {
+    "target-type": "url",
+    "ended": false,
+    "target-credit": "",
+    "url": {
+    "resource": "https://www.facebook.com/Nirvana",
+    "id": "a9cec2d1-0544-4dc9-a4b2-640751654573"
+    },
+    "type-id": "99429741-f3f6-484b-84f8-23af51991770",
+    "end": null,
+    "attribute-ids": {},
+    "source-credit": "",
+    "attribute-values": {},
+    "begin": null,
+    "type": "social network",
+    "attributes": [],
+    "direction": "forward"
+    },
+    {
+    "type-id": "99429741-f3f6-484b-84f8-23af51991770",
+    "end": null,
+    "attribute-ids": {},
+    "source-credit": "",
+    "attributes": [],
+    "type": "social network",
+    "direction": "forward",
+    "attribute-values": {},
+    "begin": null,
+    "target-type": "url",
+    "target-credit": "",
+    "ended": false,
+    "url": {
+    "resource": "https://www.instagram.com/nirvana/",
+    "id": "24639f7d-d335-4ced-9e02-0971d71c29d4"
+    }
+    },
+    {
+    "attribute-values": {},
+    "begin": null,
+    "attributes": [],
+    "type": "soundcloud",
+    "direction": "forward",
+    "attribute-ids": {},
+    "source-credit": "",
+    "end": null,
+    "type-id": "89e4a949-0976-440d-bda1-5f772c1e5710",
+    "url": {
+    "id": "14c6ec03-4bd8-4f12-bfef-f2450746adab",
+    "resource": "https://soundcloud.com/nirvana"
+    },
+    "ended": false,
+    "target-credit": "",
+    "target-type": "url"
+    },
+    {
+    "source-credit": "",
+    "attribute-ids": {},
+    "type-id": "e8571dcc-35d4-4e91-a577-a3382fd84460",
+    "end": null,
+    "attribute-values": {},
+    "begin": null,
+    "direction": "forward",
+    "attributes": [],
+    "type": "VIAF",
+    "ended": false,
+    "target-credit": "",
+    "target-type": "url",
+    "url": {
+    "id": "421a959a-c50f-4a52-99e4-3c603dd37145",
+    "resource": "http://viaf.org/viaf/138573893"
+    }
+    },
+    {
+    "url": {
+    "id": "1221730c-3a48-49fa-8001-beaa6e93c892",
+    "resource": "https://www.wikidata.org/wiki/Q11649"
+    },
+    "ended": false,
+    "target-credit": "",
+    "target-type": "url",
+    "begin": null,
+    "attribute-values": {},
+    "direction": "forward",
+    "attributes": [],
+    "type": "wikidata",
+    "source-credit": "",
+    "attribute-ids": {},
+    "end": null,
+    "type-id": "689870a4-a1e4-4912-b17f-7b2664215698"
+    },
+    {
+    "url": {
+    "resource": "https://www.youtube.com/user/NirvanaVEVO",
+    "id": "c8d415be-b993-4ade-bd28-d3ab4806fcbd"
+    },
+    "target-type": "url",
+    "ended": false,
+    "target-credit": "",
+    "begin": null,
+    "attribute-values": {},
+    "direction": "forward",
+    "attributes": [],
+    "type": "youtube",
+    "type-id": "6a540e5b-58c6-4192-b6ba-dbc71ec8fcf0",
+    "end": null,
+    "attribute-ids": {},
+    "source-credit": ""
+    }
+    ],
+    "gender-id": null,
+    "gender": null
+    }

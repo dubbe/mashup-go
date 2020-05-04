@@ -16,5 +16,5 @@ func main() {
 	wikidata := description.NewWikidata(&http.Client{}, wikipedia)
 
 	s := server.NewServer(artist.NewMusicbrainz(httpClient), description.CreateDescriptionFactory(wikipedia, wikidata), coverart.NewCoverartArchive(httpClient))
-	s.Run()
+	s.Run(":8080")
 }

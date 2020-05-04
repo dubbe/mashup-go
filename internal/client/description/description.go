@@ -7,7 +7,6 @@ import (
 
 type Description string
 
-// Interface for possible descriptiongetter
 type DescriptionClient interface {
 	Identifier() string
 	Get(chan<- Description, chan<- error)

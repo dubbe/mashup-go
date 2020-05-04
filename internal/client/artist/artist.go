@@ -46,22 +46,3 @@ func (a Artist) GetRelation(s string) (Relation, error) {
 
 	return Relation{}, errors.New("Could not get just one relation")
 }
-
-func (a Artist) FilterAlbums(s string) []Album {
-	rsf := make([]Album, 0)
-	for _, r := range a.Albums {
-		if r.ID == s {
-			rsf = append(rsf, r)
-		}
-	}
-	return rsf
-}
-
-func (a Artist) GetAlbum(s string) (Album, error) {
-	albums := a.FilterAlbums(s)
-	if len(albums) == 1 {
-		return albums[0], nil
-	}
-
-	return Album{}, errors.New("Could not get just one relation")
-}

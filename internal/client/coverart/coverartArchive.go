@@ -24,7 +24,6 @@ func NewCoverartArchive(client client.HTTPClient) *CoverartArchive {
 
 }
 
-// Get returns an artist
 func (c CoverartArchive) Get(id string, coverart chan<- Coverart) {
 	coverArt := Coverart{}
 

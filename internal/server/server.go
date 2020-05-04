@@ -1,14 +1,17 @@
 package server
 
 import (
+	"encoding/json"
 	"log"
 	"net/http"
+	"strings"
 
 	"github.com/dubbe/mashup-go/internal/client/artist"
 	"github.com/dubbe/mashup-go/internal/client/coverart"
 	"github.com/dubbe/mashup-go/internal/client/description"
+	"github.com/dubbe/mashup-go/pkg/errors"
 	"github.com/dubbe/mashup-go/pkg/mashup"
-	"github.com/gorilla/mux"
+	"github.com/google/uuid"
 )
 
 type Server struct {
@@ -18,121 +21,95 @@ type Server struct {
 }
 
 func NewServer(artistClient artist.ArtistClient, descriptionFactory *description.DescriptionFactory, coverartClient coverart.CoverartClient) *Server {
-	server := &Server{
+	s := &Server{
 		artistClient:       artistClient,
 		descriptionFactory: descriptionFactory,
 		coverartClient:     coverartClient,
 	}
-	return server
+	return s
 }
 
 func (s *Server) Run() {
 	addr := ":8080"
-	http.HandleFunc("/{mbid}", s.handler)
+	http.HandleFunc("/", s.handler)
 	log.Printf("Server started on port %s", addr)
 	log.Fatal(http.ListenAndServe(addr, nil))
 }
 
 func (s *Server) handler(w http.ResponseWriter, r *http.Request) {
-	vars := mux.Vars(r)
-	mbid := vars["mbid"]
-	s.getArtist(mbid)
+	mbid := strings.TrimPrefix(r.URL.Path, "/")
+	_, err := uuid.Parse(mbid)
+	if err != nil {
+		e := errors.E(err, errors.StatusCode(http.StatusBadRequest), "Not a valid musicbrainz-id")
+		handleError(e, w)
+		return
+	}
+
+	artist, err := s.getArtist(mbid)
+	if err != nil {
+		handleError(err, w)
+		return
+	}
+
+	w.Header().Set("Content-Type", "application/json")
+	json.NewEncoder(w).Encode(artist)
 }
 
-func (s *Server) getArtist(mbid string) mashup.Artist {
-	var description description.Description
+func (s *Server) getArtist(mbid string) (mashup.Artist, error) {
+	const op errors.Op = "Server.getArtist"
+	var desc description.Description
+	var albums []mashup.Album
 
 	artist, err := s.artistClient.Get(mbid)
 	if err != nil {
-		panic("could not get artist from musicmatch")
+		return mashup.Artist{}, errors.E(err, op, "Could not get artist from Musicbrainz")
 	}
 
 	relation, err := artist.GetRelation("wikipedia")
 	if err != nil {
 		relation, err = artist.GetRelation("wikidata")
 		if err != nil {
-			panic("could not get description")
+			return mashup.Artist{}, errors.E(err, op, "Could not find discription in neither wikipedia nor wikidata")
 		}
 	}
 
 	descriptionClient, err := s.descriptionFactory.NewDescriptionClient(relation)
 	if err != nil {
-		log.Panicf("could not get discription from %s", descriptionClient.Identifier())
+		return mashup.Artist{}, errors.E(err, op)
 	}
 
-	description, _ = descriptionClient.Get()
+	d := make(chan description.Description)
+	de := make(chan error)
+	go descriptionClient.Get(d, de)
 
-	_ = description
+	a := make(chan []mashup.Album)
+	go s.coverartClient.GetMany(artist.Albums, a)
 
-	albums := []mashup.Album{}
-	coverarts, _ := s.coverartClient.GetMany(artist.Albums)
-	for _, album := range artist.Albums {
-		a := mashup.Album{}
-		coverart, err := coverart.GetCoverart(coverarts, album.ID)
-		if err != nil {
-			a.Image = coverart.Image
-		}
+	desc = <-d
+	descErr := <-de
+	albums = <-a
 
-		a.ID = album.ID
-		a.Title = album.Title
-		albums = append(albums, a)
+	if descErr != nil {
+		return mashup.Artist{}, errors.E(err, op, "Could not download description")
 	}
 
 	return mashup.Artist{
 		MBID:        artist.ID,
 		Name:        artist.Name,
-		Description: description.Description,
+		Description: string(desc),
 		Albums:      albums,
-	}
-
+	}, nil
 }
 
-func (s *Server) getArtistAsync(mbid string) mashup.Artist {
-	var description description.Description
-
-	artist, err := s.artistClient.Get(mbid)
-	if err != nil {
-		panic("could not get artist from musicmatch")
+func handleError(err error, w http.ResponseWriter) {
+	e := err.(*errors.Error)
+	sc := e.StatusCodes()
+	if len(sc) != 0 {
+		w.WriteHeader(int(sc[0]))
+	} else {
+		w.WriteHeader(http.StatusInternalServerError)
 	}
 
-	relation, err := artist.GetRelation("wikipedia")
-	if err != nil {
-		relation, err = artist.GetRelation("wikidata")
-		if err != nil {
-			panic("could not get description")
-		}
-	}
-
-	descriptionClient, err := s.descriptionFactory.NewDescriptionClient(relation)
-	if err != nil {
-		log.Panicf("could not get discription from %s", descriptionClient.Identifier())
-	}
-
-	description, _ = descriptionClient.Get()
-
-	_ = description
-
-	albums := []mashup.Album{}
-	c := make(chan []coverart.Coverart)
-	go s.coverartClient.GetManyAsync(artist.Albums, c)
-	coverarts := <-c
-
-	for _, album := range artist.Albums {
-		a := mashup.Album{}
-		coverart, err := coverart.GetCoverart(coverarts, album.ID)
-		if err != nil {
-			a.Image = coverart.Image
-		}
-
-		a.ID = album.ID
-		a.Title = album.Title
-		albums = append(albums, a)
-	}
-
-	return mashup.Artist{
-		MBID:        artist.ID,
-		Name:        artist.Name,
-		Description: description.Description,
-		Albums:      albums,
-	}
+	w.Write([]byte(e.Msg))
+	e.LogError()
 }

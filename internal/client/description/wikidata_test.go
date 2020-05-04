@@ -19,7 +19,13 @@ func TestWikidataGetNirvana(t *testing.T) {
 			Resource: "https://www.wikidata.org/wiki/Q11649",
 		},
 	})
-	description, err := wikidata.Get()
+
+	d := make(chan Description)
+	e := make(chan error)
+	go wikidata.Get(d, e)
+	desc := <-d
+	err := <-e
+
 	assert.Equal(t, nil, err)
-	assert.Contains(t, description.Description, "Nirvana")
+	assert.Contains(t, desc, "Nirvana")
 }

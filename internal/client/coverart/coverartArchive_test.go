@@ -6,36 +6,30 @@ import (
 	"testing"
 
 	"github.com/dubbe/mashup-go/internal/client/artist"
+	"github.com/dubbe/mashup-go/pkg/mashup"
 	"github.com/stretchr/testify/assert"
 )
-
-func TestGetBleachCoverart(t *testing.T) {
-	coverart := NewCoverartArchive(&http.Client{})
-
-	art, err := coverart.Get("f1afec0b-26dd-3db5-9aa1-c91229a74a24")
-	assert.Equal(t, nil, err)
-	assert.Equal(t, "http://coverartarchive.org/release/7d166a44-cfb5-4b08-aacb-6863bbe677d6/1247101964.jpg", art.Image)
-}
 
 func TestMissingCoverart(t *testing.T) {
 	coverart := NewCoverartArchive(&http.Client{})
 
-	art, err := coverart.Get("nope")
-	assert.Equal(t, nil, err)
+	c := make(chan Coverart)
+	go coverart.Get("nope", c)
+	art := <-c
 	assert.Equal(t, "", art.Image)
 }
 
-func TestGetBleachCoverartAsync(t *testing.T) {
+func TestGetBleachCoverart(t *testing.T) {
 	coverart := NewCoverartArchive(&http.Client{})
 
 	c := make(chan Coverart)
-	go coverart.GetAsync("f1afec0b-26dd-3db5-9aa1-c91229a74a24", c)
+	go coverart.Get("f1afec0b-26dd-3db5-9aa1-c91229a74a24", c)
 	art := <-c
 
 	assert.Equal(t, "http://coverartarchive.org/release/7d166a44-cfb5-4b08-aacb-6863bbe677d6/1247101964.jpg", art.Image)
 }
 
-func TestNirvanaBleachCoverartAsync(t *testing.T) {
+func TestNirvanaBleachCoverart(t *testing.T) {
 	coverart := NewCoverartArchive(&http.Client{})
 	albums := []artist.Album{{
 		ID:    "f1afec0b-26dd-3db5-9aa1-c91229a74a24",
@@ -45,8 +39,8 @@ func TestNirvanaBleachCoverartAsync(t *testing.T) {
 		Title: "Nevermind",
 	}}
 
-	c := make(chan []Coverart)
-	go coverart.GetManyAsync(albums, c)
+	c := make(chan []mashup.Album)
+	go coverart.GetMany(albums, c)
 	art := <-c
 
 	sort.SliceStable(albums, func(i, j int) bool {

@@ -4,6 +4,7 @@ import (
 	"errors"
 
 	"github.com/dubbe/mashup-go/internal/client/artist"
+	"github.com/dubbe/mashup-go/pkg/mashup"
 )
 
 type Coverart struct {
@@ -12,9 +13,8 @@ type Coverart struct {
 }
 
 type CoverartClient interface {
-	Get(id string) (Coverart, error)
-	GetMany([]artist.Album) ([]Coverart, error)
-	GetManyAsync([]artist.Album, chan []Coverart)
+	Get(string, chan<- Coverart)
+	GetMany([]artist.Album, chan<- []mashup.Album)
 }
 
 func FilterCoverart(coverarts []Coverart, s string) []Coverart {

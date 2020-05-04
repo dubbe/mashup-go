@@ -27,11 +27,17 @@ func TestDescriptionWikidata(t *testing.T) {
 			Resource: "https://www.wikidata.org/wiki/Q11649",
 		},
 	})
+
 	assert.Equal(t, nil, err)
 
-	description, err := client.Get()
+	d := make(chan Description)
+	e := make(chan error)
+	go client.Get(d, e)
+	desc := <-d
+	err = <-e
+
 	assert.Equal(t, nil, err)
-	assert.Contains(t, description.Description, "Nirvana")
+	assert.Contains(t, desc, "Nirvana")
 }
 
 func TestDescriptionWikipedia(t *testing.T) {
@@ -44,7 +50,12 @@ func TestDescriptionWikipedia(t *testing.T) {
 	})
 	assert.Equal(t, nil, err)
 
-	description, err := client.Get()
+	d := make(chan Description)
+	e := make(chan error)
+	go client.Get(d, e)
+	desc := <-d
+	err = <-e
+
 	assert.Equal(t, nil, err)
-	assert.Contains(t, description.Description, "The Temptations")
+	assert.Contains(t, desc, "The Temptations")
 }

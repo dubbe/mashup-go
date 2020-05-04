@@ -1,19 +1,16 @@
 package description
 
 import (
-	"errors"
-
 	"github.com/dubbe/mashup-go/internal/client/artist"
+	"github.com/dubbe/mashup-go/pkg/errors"
 )
 
-type Description struct {
-	Description string
-}
+type Description string
 
 // Interface for possible descriptiongetter
 type DescriptionClient interface {
 	Identifier() string
-	Get() (Description, error)
+	Get(chan<- Description, chan<- error)
 	SetRelation(artist.Relation)
 }
 
@@ -35,7 +32,7 @@ func (d DescriptionFactory) NewDescriptionClient(relation artist.Relation) (Desc
 		return descriptionClient, nil
 	}
 
-	return nil, errors.New("Could not get one descriptionClient only")
+	return nil, errors.E("Could not get one descriptionClient only")
 }
 
 func (d DescriptionFactory) FilterDescriptionClients(s string) []DescriptionClient {
